@@ -23,7 +23,7 @@ module.exports.handleReply = async function ({ api, event, handleReply }) {
         const response = await axios.get(apiUrl);
         const { response: result } = response.data;
 
-        const responseMessage = `𝗖𝗛𝗔𝗧𝗚𝗣𝗧\n━━━━━━━━━━━━━━━━━━\n${result}\n━━━━━━━━━━━━━━━━━━\n`;
+        const responseMessage = `𝗔𝗿𝗶𝗲𝘀 𝗔𝗜\n━━━━━━━━━━━━━━\n${result}\n━━━━━━━━━━━━━━\n`;
         api.editMessage(responseMessage, lad.messageID, threadID, messageID);
     } catch (error) {
         console.error(error);
